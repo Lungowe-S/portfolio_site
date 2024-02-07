@@ -75,10 +75,33 @@ ul, li {
     list-style-type: none;
 }
 
+@property --offset {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0.1;
+}
+
 a {
     color: currentColor;
-    text-decoration-thickness: 2px;
-    text-underline-offset: .2ex;
+    /* text-decoration-thickness: 2px; */
+    text-decoration: underline 0.15em;
+    text-underline-offset: var(--offset, 0.2em);
+    transition: --offset 400ms, text-decoration-color 400ms;
+}
+
+a:hover {
+    --offset: 0.4em;
+    text-decoration-color: var(--color-yellow);
+}
+
+@supports not (background: paint(something)) {
+    a {
+        transition: text-underline-offset 400ms, text-decoration-color 400ms;
+    }
+
+    a:hover {
+        text-underline-offset: 0.4ex;
+    }
 }
 
 .main__container,
@@ -126,7 +149,25 @@ a {
 
 .nav__item a {
     font-weight: var(--font-bold);
-    text-decoration: none;
+    /*text-decoration: none;*/
+    display: block;
+    position: relative;
+}    
+
+/*.nav__item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-yellow);
+    visibility: hidden;
+    transition: all 0.2s ease-in-out 0s;
+} */
+
+.nav__item a:hover::before {
+    visibility: visible;
 }
 
 .logo {
@@ -165,6 +206,11 @@ a {
  .social-links .fa-linkedin {
      font-size: 1.875rem;
      line-height: 1;
+ }
+
+ .social-links .fa-github:hover,
+ .social-links .fa-linkedin:hover {
+    color: var(--color-yellow);
  }
 
  .social-links {
@@ -304,12 +350,14 @@ a {
  * PROJECT STYLES
  */
 .project {
-    border: 3px solid var(--color-dark);
-    transition: .2s ease-in-out;
+    border: 3px solid var(--color-dark); 
+    /*transition: transform .2s ease-in-out;*/
 }
 
 .project:hover {
-     transform: scale(1.01) translateY(-1px);
+    transform: scale(1.01) translateY(-1px) translateZ(0);
+    /* transition: transform .1s; */
+     transition: transform .2s ease-in-out;
 }
 
 .project__title {
@@ -318,23 +366,69 @@ a {
 
 .project__content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
 }
 
+.project__media {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+}
 
-.project img {
+.project__media-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.9375rem;
+}
+
+.project__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 6px solid white;
+    object-position: top center;
+}
+
+.project__media img:nth-last-of-type(5) {
+    object-fit: none;
+}
+
+/* .project img {
     object-position: center;
-    margin: auto;
     aspect-ratio: 16/9;
     border: 4px solid white;
-    /* border-radius: 9px; */
-}
+    max-inline-size: 100%;
+} */
+
+
 
 .project:not(:hover) img {
     filter: grayscale(1);
+}
+
+.project:hover .fa-github {
+    color: var(--color-yellow);
+}
+
+.duotone-card__icon {
+    visibility: hidden;
+}
+
+.project:hover .duotone-card__icon {
+    visibility: visible;
+    fill: var(--color-yellow);
+    transform: translateX(3px);
+    transition: transform 300ms linear;
 }
 
 .project__heading {
@@ -423,6 +517,7 @@ footer p {
 
 .fa-solid.fa-heart {
     color: rgb(207, 41, 41);
+    --fa-animation-duration: 2s;
 }
 
 
