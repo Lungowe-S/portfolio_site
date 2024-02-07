@@ -1,0 +1,59 @@
+<section id="projects" class="projects">
+            <div class="project__wrapper flow">
+                <h3 class="project__title">
+                    <i class="fa-solid fa-chevron-left fa-skills1"></i>
+                    Projects
+                    <i class="fa-solid fa-chevron-right fa-skills2"></i>
+                </h3>
+                <div class="project__content">
+                    {% for project in collections.projects %}
+                    <article class="project">
+                        <div class="project__inner">
+                            <h4 class="project__heading">{{ project.data.title }}</h4>
+                            <a target="_blank" href={{ project.data.projectURL }}>
+                                <div class="project__media">
+                                    <div class="project__media-wrapper">
+                                         {# <source class="card__img" srcset={{ project.data.imageURL5 }} media={{ project.data.media }}>
+                                        <source class="card__img" srcset={{ project.data.imageURL4 }} media={{ project.data.media }}>
+                                        <source class="card__img" srcset={{ project.data.imageURL3 }} media={{ project.data.media }}>
+                                        <source class="card__img" srcset={{ project.data.imageURL2 }} media={{ project.data.media }}>
+                                        <source class="card__img" srcset={{ project.data.imageURL1 }} media={{ project.data.media }}> #}
+                                        <img class="card__img" 
+                                            width="300" 
+                                            height="250" 
+                                            loading="lazy" 
+                                            src={{ project.data.imageURL }} 
+                                            alt={{ project.data.alt }}
+                                            srcset={{ project.data.imageURL1 }},
+                                                   {{ project.data.imageURL2 }},
+                                                   {{ project.data.imageURL3 }},
+                                                   {{ project.data.imageURL4 }},
+                                                   {{ project.data.imageURL5 }},
+                                                   {{ project.data.imageURL6 }}  
+                                            sizes="(max-width: 300px) 100vw, 300px"
+                                            
+                                        />  
+                                     </div>    
+                                </div>
+                            </a>
+                            <div class="project__description flow">
+                                <p class="project__tools">{{ project.data.tools }}</p>
+                                <p>{{ project.data.description }}</p>
+                            </div>
+                            <div class="project__link">
+                                <div class="project__live-site">
+                                    <a href={{ project.data.projectURL }}>
+                                        Live Site
+                                    </a>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" class="duotone-card__icon">
+                                        <path d="M9.707 18.707l6-6c0.391-0.391 0.391-1.024 0-1.414l-6-6c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0z"></path>
+                                    </svg>
+                                </div>
+                                <a href={{ project.data.githubURL }}><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+               </div> 
+            </div>
+</section>                
