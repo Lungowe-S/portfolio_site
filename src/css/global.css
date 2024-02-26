@@ -40,13 +40,13 @@ h4 {
 
 h1 {
     font-size: var(--size-step-4);
-    letter-spacing: -4.42px;
+    letter-spacing: -5.7px;
 }
 
 h2 {
     font-size: var(--size-step-3);
     font-weight: var(--font-normal);
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
     font-family: var(--base-font-family);
     max-width: 40ch;
 }
@@ -499,6 +499,10 @@ footer p {
         letter-spacing: -7.65px;
     }
 
+    h2 {
+        letter-spacing: -2.9px;
+    }
+
     .hero {
         height: 28.25rem
     }
@@ -510,16 +514,22 @@ footer p {
     }
 }
 
-@media screen and (min-width: 50rem) {
+/* @media screen and (min-width: 50rem) {
     .header__wrapper {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
-}
+} */
 
 @media screen and (min-width: 1024px) {
     /** HEADER STYLES **/
+    .header__wrapper {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
     .nav__list {
         gap: 2.625rem;
     }

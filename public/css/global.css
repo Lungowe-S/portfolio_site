@@ -7,9 +7,6 @@
     --color-yellow: #E9B14C;
     --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
     --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
-    /* --size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem); */
-    /* --size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem); */
-    /* --size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem); */
     --size-step-2: clamp(1.5rem, 0.761rem + 3.15vw, 3.125rem);
     --size-step-3: clamp(1.375rem, 0.722rem + 2.79vw, 2.813rem);
     --size-step-4: clamp(1.625rem, 0.545rem + 4.61vw, 4rem);
@@ -43,20 +40,19 @@ h4 {
 
 h1 {
     font-size: var(--size-step-4);
-    letter-spacing: -4.42px;
+    letter-spacing: -5.7px;
 }
 
 h2 {
     font-size: var(--size-step-3);
     font-weight: var(--font-normal);
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
     font-family: var(--base-font-family);
     max-width: 40ch;
 }
 
 h3 {
     font-size: var(--size-step-2);
-    /* font-size: clamp(1.5rem, 0.761rem + 3.15vw, 3.125rem); */
     letter-spacing: -3.6px;
     text-align: center;
     margin-block-end: 2.5rem;
@@ -83,7 +79,6 @@ ul, li {
 
 a {
     color: currentColor;
-    /* text-decoration-thickness: 2px; */
     text-decoration: underline 0.15em;
     text-underline-offset: var(--offset, 0.2em);
     transition: --offset 400ms, text-decoration-color 400ms;
@@ -107,7 +102,6 @@ a:hover {
 .main__container,
 .header__wrapper,
 .footer__wrapper {
-    /* margin: 0 2rem; */
     margin-left: clamp(2rem, -1.778rem + 16.12vw, 10.313rem);
     margin-right: clamp(2rem, -1.778rem + 16.12vw, 10.313rem);
 }
@@ -149,22 +143,9 @@ a:hover {
 
 .nav__item a {
     font-weight: var(--font-bold);
-    /*text-decoration: none;*/
     display: block;
     position: relative;
 }    
-
-/*.nav__item a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-yellow);
-    visibility: hidden;
-    transition: all 0.2s ease-in-out 0s;
-} */
 
 .nav__item a:hover::before {
     visibility: visible;
@@ -176,7 +157,6 @@ a:hover {
     font-weight: 700;
     letter-spacing: -3.4px;
     color: var(--color-yellow);
-    /* font-size: var(--logo-font); */
     font-size: clamp(1.25rem, 1.108rem + 0.61vw, 1.563rem);
 }
 
@@ -184,7 +164,6 @@ a:hover {
  * HERO STYLES
  */
 .hero {
-    /* height: 28.875rem; */
     height: 23.75rem;
 }
 
@@ -314,7 +293,6 @@ a:hover {
 .skills__subheading {
     font-family: var(--base-font-family);
     text-align: center;
-    /* font-size: 1.375rem; */
     margin-block-end: 1.875rem;
     font-size: clamp(1.438rem, 0.955rem + 2.06vw, 2.5rem);
 }
@@ -351,13 +329,11 @@ a:hover {
  */
 .project {
     border: 3px solid var(--color-dark); 
-    /*transition: transform .2s ease-in-out;*/
 }
 
 .project:hover {
     transform: scale(1.01) translateY(-1px) translateZ(0);
-    /* transition: transform .1s; */
-     transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
 }
 
 .project__title {
@@ -402,14 +378,6 @@ a:hover {
 .project__media img:nth-last-of-type(5) {
     object-fit: none;
 }
-
-/* .project img {
-    object-position: center;
-    aspect-ratio: 16/9;
-    border: 4px solid white;
-    max-inline-size: 100%;
-} */
-
 
 
 .project:not(:hover) img {
@@ -531,8 +499,11 @@ footer p {
         letter-spacing: -7.65px;
     }
 
+    h2 {
+        letter-spacing: -2.9px;
+    }
+
     .hero {
-        /* height: 26.25rem; */
         height: 28.25rem
     }
 
@@ -543,26 +514,27 @@ footer p {
     }
 }
 
-@media screen and (min-width: 50rem) {
+/* @media screen and (min-width: 50rem) {
     .header__wrapper {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
-}
+} */
 
 @media screen and (min-width: 1024px) {
     /** HEADER STYLES **/
-    /* .logo {
-        letter-spacing: -6.4px;
-    } */
+    .header__wrapper {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
 
     .nav__list {
         gap: 2.625rem;
     }
 
     h1 {
-        /* letter-spacing: -10.88px; */
         letter-spacing: -13.88px;
     }
 
