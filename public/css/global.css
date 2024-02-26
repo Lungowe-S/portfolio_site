@@ -514,14 +514,6 @@ footer p {
     }
 }
 
-/* @media screen and (min-width: 50rem) {
-    .header__wrapper {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-} */
-
 @media screen and (min-width: 1024px) {
     /** HEADER STYLES **/
     .header__wrapper {
