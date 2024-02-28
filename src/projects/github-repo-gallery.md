@@ -9,4 +9,5 @@ alt: "image of GitHub Repo Gallery landing page"
 tools: "JavaScript, REST API"
 description: "The GitHub Repo Gallery is a curated collection of my projects. Using JavaScript and the GitHub API, it shows all my GitHub repositories in an engaging format. The search function allows you to find and view interesting repos."
 githubURL: "https://github.com/Lungowe-S/github-repo-gallery"
+displayOrder: 2
 ---

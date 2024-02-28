@@ -9,4 +9,5 @@ alt: "Image of the Fylo dark theme landing page"
 tools: "HTML, CSS Grid, Flexbox"
 description: "Fylo is where simplicity meets sophistication. Using a Figma design and HTML for its structure, the layout comes to life through the power of CSS Grid and Flexbox. The result? A great user experience on any screen size."
 githubURL: "https://github.com/Lungowe-S/fylo-dark-theme-landing-page"
+displayOrder: 5
 ---

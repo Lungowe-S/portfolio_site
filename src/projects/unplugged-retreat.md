@@ -13,4 +13,5 @@ media: "(orientation: portrait)"
 tools: "HTML, CSS, Vercel"
 description: "Inspired by a captivating Photoshop design comp, Unplugged Retreat is a meticulously crafted, fully responsive website designed to provide your team with an escape from city life. It comes to life through the power of HTML and CSS."
 githubURL: "https://github.com/Lungowe-S/unplugged-retreat"
+displayOrder: 6
 ---

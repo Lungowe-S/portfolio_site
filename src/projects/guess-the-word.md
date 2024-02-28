@@ -12,4 +12,5 @@ alt: "image of the Guess the Word game landing page"
 tools: "JavaScript"
 description: "“Guess the Word” is an interactive game that will put your word-guessing skills to the test. Using JavaScript, this fun game challenges you to correctly guess the letters of a randomly selected word before time runs out."
 githubURL: "https://github.com/Lungowe-S/guess-the-word"
+displayOrder: 4
 ---

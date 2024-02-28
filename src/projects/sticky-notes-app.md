@@ -9,4 +9,5 @@ alt: "Image of the Sticky Note app landing page"
 tools: "JavaScript, React"
 description: "The Sticky-Note app is your trusty ‘second brain’. Made with React, the app allows you to take notes and stay organized. Seamlessly add, edit, delete and save notes, ensuring essential information is always at your fingertips."
 githubURL: "https://github.com/Lungowe-S/sticky-note-app"
+displayOrder: 3
 ---
