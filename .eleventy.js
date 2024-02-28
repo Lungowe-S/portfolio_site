@@ -3,8 +3,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/css');
     eleventyConfig.addWatchTarget('src/css');
 
+    const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
+
     eleventyConfig.addCollection('projects', (collection) => {
-        return collection.getFilteredByGlob('src/projects/*.md');
+        return sortByDisplayOrder(collection.getFilteredByGlob('src/projects/*.md'));
     });
 
     eleventyConfig.addShortcode('year', () => {
