@@ -20,7 +20,8 @@
 
 /**
  * GLOBAL STYLES
- */
+ */   
+
 body{
     background: var(--color-light);
     color: var(--color-dark);
@@ -490,6 +491,12 @@ footer p {
 
 
 /*** Media query ***/
+ @media (prefers-reduced-motion: no-preference) {
+     html {
+         scroll-behavior: smooth;
+     }
+ }
+
 @media screen and (min-width: 48rem) {
     .nav__list {
         margin-top: 0;

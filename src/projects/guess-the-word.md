@@ -9,7 +9,7 @@ imageURL4: "/images/Guess_the_Word_tulyyt_c_scale,w_895.png"
 imageURL5: "/images/Guess_the_Word_tulyyt_c_scale,w_1085.png"
 imageURL6: "/images/Guess_the_Word_tulyyt_c_scale,w_1366.png"
 alt: "image of the Guess the Word game landing page"
-tools: "JavaScript"
+tools: "JS, DOM Manipulation"
 description: "“Guess the Word” is an interactive game that will put your word-guessing skills to the test. Using JavaScript, this fun game challenges you to correctly guess the letters of a randomly selected word before time runs out."
 githubURL: "https://github.com/Lungowe-S/guess-the-word"
 displayOrder: 4
