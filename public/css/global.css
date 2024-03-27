@@ -4,7 +4,8 @@
 :root {
     --color-dark: #152A3E;
     --color-light: #EEEFDA;
-    --color-yellow: #E9B14C;
+    /* --color-yellow: #E9B14C; */
+    --color-yellow: #825B12;
     --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
     --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
     --size-step-2: clamp(1.5rem, 0.761rem + 3.15vw, 3.125rem);
