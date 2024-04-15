@@ -17,14 +17,14 @@
                                             width="300" 
                                             height="250" 
                                             loading="lazy" 
-                                            src={{ project.data.imageURL }} 
-                                            alt={{ project.data.alt }}
-                                            srcset={{ project.data.imageURL1 }},
+                                            src="{{ project.data.imageURL }}" 
+                                            alt="{{ project.data.alt }}"
+                                            srcset="{{ project.data.imageURL1 }},
                                                    {{ project.data.imageURL2 }},
                                                    {{ project.data.imageURL3 }},
                                                    {{ project.data.imageURL4 }},
                                                    {{ project.data.imageURL5 }},
-                                                   {{ project.data.imageURL6 }}  
+                                                   {{ project.data.imageURL6 }}"  
                                             sizes="(max-width: 300px) 100vw, 300px"
                                             
                                         />  
