@@ -206,8 +206,6 @@ a:hover {
     letter-spacing: -3.1px;
 }
 
-
-
 /**
  * ABOUT STYLES
  */
@@ -489,9 +487,10 @@ footer p {
     --fa-animation-duration: 2s;
 }
 
-
-/*** Media query ***/
- @media (prefers-reduced-motion: no-preference) {
+/**
+ * MEDIA QUERIES 
+ */
+@media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
     }
@@ -521,7 +520,7 @@ footer p {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
     /** HEADER STYLES **/
     .header__wrapper {
         flex-direction: row;
