@@ -1,14 +1,14 @@
-    <header class="header">
-        <div class="header__wrapper">
-            <a class="logo" href="#">Lungowe Simasiku</a>
-            <nav class="nav__menu">
-                <ul class="nav__list">
+<header class="header">
+    <div class="header__wrapper">
+        <a class="logo" href="#">Lungowe Simasiku</a>
+        <nav class="nav__menu">
+            <ul class="nav__list">
                 {% for item in navigation.items %}
                     <li class="nav__item">
                         <a href="{{ item.url }}">{{ item.text }}</a>
                     </li>
                 {% endfor %}    
-                </ul>
-            </nav>
-        </div>
-    </header>
+            </ul>
+        </nav>
+    </div>
+</header>
