@@ -1,12 +1,12 @@
-<section id="projects" class="projects">
-            <div class="project__wrapper flow">
-                <h3 class="project__title">
-                    <i class="fa-solid fa-chevron-left fa-skills1"></i>
+    <section id="projects" class="projects">
+        <div class="project__wrapper flow">
+            <h3 class="project__title">
+                <i class="fa-solid fa-chevron-left fa-skills1"></i>
                     Projects
-                    <i class="fa-solid fa-chevron-right fa-skills2"></i>
-                </h3>
-                <div class="project__content">
-                    {% for project in collections.projects %}
+                <i class="fa-solid fa-chevron-right fa-skills2"></i>
+            </h3>
+            <div class="project__content">
+                {% for project in collections.projects %}
                     <article class="project">
                         <div class="project__inner">
                             <h4 class="project__heading">{{ project.data.title }}</h4>
@@ -20,15 +20,13 @@
                                             src="{{ project.data.imageURL }}" 
                                             alt="{{ project.data.alt }}"
                                             srcset="{{ project.data.imageURL1 }},
-                                                   {{ project.data.imageURL2 }},
-                                                   {{ project.data.imageURL3 }},
-                                                   {{ project.data.imageURL4 }},
-                                                   {{ project.data.imageURL5 }},
-                                                   {{ project.data.imageURL6 }}"  
-                                            sizes="(max-width: 300px) 100vw, 300px"
-                                            
-                                        >  
-                                     </div>    
+                                                {{ project.data.imageURL2 }},
+                                                {{ project.data.imageURL3 }},
+                                                {{ project.data.imageURL4 }},
+                                                {{ project.data.imageURL5 }},
+                                                {{ project.data.imageURL6 }}"  
+                                                sizes="(max-width: 300px) 100vw, 300px">  
+                                    </div>    
                                 </div>
                             </a>
                             <div class="project__description flow">
@@ -48,7 +46,7 @@
                             </div>
                         </div>
                     </article>
-                    {% endfor %}
-               </div> 
-            </div>
-</section>                
+                {% endfor %}
+            </div> 
+        </div>
+    </section>                
