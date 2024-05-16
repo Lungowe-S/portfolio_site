@@ -4,9 +4,9 @@
         <nav class="nav__menu">
             <ul class="nav__list">
                 {% for item in navigation.items %}
-                    <li class="nav__item">
-                        <a href="{{ item.url }}">{{ item.text }}</a>
-                    </li>
+                <li class="nav__item">
+                    <a href="{{ item.url }}">{{ item.text }}</a>
+                </li>
                 {% endfor %}    
             </ul>
         </nav>
