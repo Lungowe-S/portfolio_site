@@ -6,7 +6,7 @@
                 <i class="fa-solid fa-chevron-right fa-skills2"></i>
             </h3>
             <div class="project__content">
-                {% for project in collections.projects %}
+                {%- for project in collections.projects %}
                     <article class="project">
                         <div class="project__inner">
                             <h4 class="project__heading">{{ project.data.title }}</h4>
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </article>
-                {% endfor %}
+                {%- endfor %}
             </div> 
         </div>
     </section>                
