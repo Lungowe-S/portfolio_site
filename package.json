@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch",
-    "build": "npx eleventy && prettier --write '_site/**/*.html'",
+    "build": "npx eleventy",
     "format": "npx prettier --write **/*.html"
   },
   "keywords": [],
