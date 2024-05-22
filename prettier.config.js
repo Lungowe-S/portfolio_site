@@ -1,15 +1,12 @@
 // prettier.config.js
-
-const config = {
+module.exports = (config) = {
   plugins: ["prettier-plugin-jinja-template"],
   overrides: [
     {
-      files: ["*.njk"],
+      files: ["*.html"],
       options: {
         parser: "jinja-template",
       },
     },
   ],
 };
-
-export default config;
