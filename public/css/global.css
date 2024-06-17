@@ -91,7 +91,7 @@ a:hover {
     text-decoration-color: var(--color-yellow);
 }
 
-@supports not (background: paint(something)) {
+@supports not (background: blue) {
     a {
         transition: text-underline-offset 400ms, text-decoration-color 400ms;
     }
