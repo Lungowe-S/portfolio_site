@@ -31,6 +31,10 @@ body {
     line-height: 1.7;
 } 
 
+* {
+    scrollbar-color: var(--color-yellow) #c2c5cc;
+}
+
 h1,
 h2,
 h3,
@@ -91,7 +95,7 @@ a:hover {
     text-decoration-color: var(--color-yellow);
 }
 
-@supports not (background: blue) {
+@supports not (background: paint(something)) {
     a {
         transition: text-underline-offset 400ms, text-decoration-color 400ms;
     }
@@ -119,6 +123,24 @@ a:hover {
 :is(h1, h2, h3, h4)+* {
     --flow-space: 0.5em;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+.hero__wrapper,
+.about__details,
+.skills_wrapper,
+.project {
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range: exit -50px;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+}
+
 
 /**
  * HEADER STYLES
@@ -174,9 +196,13 @@ a:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
 
-.hero__contact {
+    /* animation: fade-out linear;
+        animation-timeline: view();
+        animation-range: exit -50px;*/
+} 
+
+.hero__contact{
     margin-top: auto;
     display: flex;
     flex-direction: column;
