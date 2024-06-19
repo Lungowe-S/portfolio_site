@@ -31,6 +31,10 @@ body {
     line-height: 1.7;
 } 
 
+* {
+    scrollbar-color: var(--color-yellow) #c2c5cc;
+}
+
 h1,
 h2,
 h3,
@@ -91,7 +95,7 @@ a:hover {
     text-decoration-color: var(--color-yellow);
 }
 
-@supports not (background: blue) {
+@supports not (background: paint(something)) {
     a {
         transition: text-underline-offset 400ms, text-decoration-color 400ms;
     }
